@@ -26,7 +26,7 @@
 
 ##### 基本介绍
     1) 客户端不应该依赖它不需要的接口，即一个类对另一个类的依赖应该建立在最小的接口上
-    2) 先看一张图:（见"基本介绍图"）
+    2) 先看一张图:（见下"基本介绍图"）
     3) 类A通过接口Interface1依赖类B，类C通过接口Interface1依赖类D，如果接口Interface1对于类A和类C来说不是最小接口，那么类B和类D必须去实现他们不需要的方法。
     4) 按隔离原则应当这样处理：将接口Interface1拆分为独立的几个接口，类A和类C分别与他们需要的接口建立依赖关系。也就是采用接口隔离原则
 
@@ -34,12 +34,14 @@
 
 [代码演示看 com/atguigu/principle/inversion/DependecyInversion.java](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/principle/inversion/DependecyInversion.java)
 
-###### 应传统方法的问题和使用接口隔离原则改进
+###### 应传统方法的问题和使用接口隔离原则改进，如图：
+
+![接口隔离原则改进图1.jpg](https://github.com/hezhiliang/DesignPatterns/blob/master/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E6%94%B9%E8%BF%9B%E5%9B%BE1.jpg "接口隔离原则改进图1")
+
     1) 类A通过接口Interface1依赖类B，类C通过接口Interface1依赖类D，如果接口Interface1对于类A和类C来说不是最小接口，那么类B和类D必须去实现他们不需要的方法
     2) 将接口Interface1拆分为独立的几个接口，类A和类C分别与他们需要的接口建立依赖关系。也就是采用接口隔离原则
     3) 接口Interface1中出现的方法，根据实际情况拆分为三个接口
 
-![接口隔离原则改进图1.jpg](https://github.com/hezhiliang/DesignPatterns/blob/master/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E6%94%B9%E8%BF%9B%E5%9B%BE1.jpg "接口隔离原则改进图1")
 
 [代码演示看 com/atguigu/principle/inversion/improve/DependecyInversion.java](https://github.com/hezhiliang/DesignPatterns/blob/master/src/com/atguigu/principle/inversion/improve/DependecyInversion.java)
 
@@ -82,8 +84,12 @@
     2) 一个软件实体如类，模块和函数应该对扩展开放(对提供方)， 对修改关闭(对使用方)。 用抽象构建框架，用实现扩展细节。
     3) 当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。
     4) 编程中遵循其它原则，以及使用设计模式的目的就是遵循开闭原则。
-    
+
+###### 看一个画图形的功能。类图设计，如下:
+
 ![开闭原则演示代码的类图设计.jpg](https://raw.githubusercontent.com/hezhiliang/DesignPatterns/master/img/%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81%E7%9A%84%E7%B1%BB%E5%9B%BE%E8%AE%BE%E8%AE%A1.jpg "开闭原则演示代码的类图设计")
+
+###### 看下面一段代码：
 
 [代码演示看com.atguigu.principle.ocp.java](https://github.com/hezhiliang/DesignPatterns/blob/master/src/com/atguigu/principle/ocp/Ocp.java)
 
