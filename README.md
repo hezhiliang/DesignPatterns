@@ -25,7 +25,7 @@
 
 ##### 基本介绍
     1) 客户端不应该依赖它不需要的接口，即一个类对另一个类的依赖应该建立在最小的接口上
-    2) 先看一张图:![基本介绍图](https://github.com/hezhiliang/DesignPatterns/blob/master/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%9B%BE1.png)
+    2) 先看一张图:![基本介绍图](https://raw.githubusercontent.com/hezhiliang/DesignPatterns/master/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%9B%BE1.png)
     3) 类A通过接口Interface1依赖类B，类C通过接口Interface1依赖类D，如果接口Interface1对于类A和类C来说不是最小接口，那么类B和类D必须去实现他们不需要的方法。
     4) 按隔离原则应当这样处理：将接口Interface1拆分为独立的几个接口，类A和类C分别与他们需要的接口建立依赖关系。也就是采用接口隔离原则
 
