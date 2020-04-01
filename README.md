@@ -20,7 +20,7 @@
     3) 降低变更引起的风险
     4) 通常情况下， 我们应当遵守单一职责原则，只有逻辑足够简单，才可以在代码级违反单一职责原则；只有类中方法数量足够少，可以在方法级别保持单一职责原则
 
-[代码演示看 com.atguigu.principle.singleresponsibility](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/singleresponsibility)
+[代码演示看 com.atguigu.principle.singleresponsibility](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/principle/singleresponsibility)
 
 ### 2. 接口隔离原则(Interface Segregation Principle)
 
@@ -32,7 +32,7 @@
 
 ![接口隔离原则基本介绍图1.png](https://raw.githubusercontent.com/hezhiliang/DesignPatterns/master/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%9B%BE1.png "接口隔离原则基本介绍图1")
 
-[代码演示看 com/atguigu/principle/inversion/DependecyInversion.java](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/inversion/DependecyInversion.java)
+[代码演示看 com/atguigu/principle/inversion/DependecyInversion.java](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/principle/inversion/DependecyInversion.java)
 
 ###### 应传统方法的问题和使用接口隔离原则改进
     1) 类A通过接口Interface1依赖类B，类C通过接口Interface1依赖类D，如果接口Interface1对于类A和类C来说不是最小接口，那么类B和类D必须去实现他们不需要的方法
@@ -41,7 +41,7 @@
 
 ![接口隔离原则改进图1.jpg](https://github.com/hezhiliang/DesignPatterns/blob/master/img/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99%E6%94%B9%E8%BF%9B%E5%9B%BE1.jpg "接口隔离原则改进图1")
 
-[代码演示看 com/atguigu/principle/inversion/improve/DependecyInversion.java](https://github.com/hezhiliang/DesignPatterns/blob/master/src/com/atguigu/inversion/improve/DependecyInversion.java)
+[代码演示看 com/atguigu/principle/inversion/improve/DependecyInversion.java](https://github.com/hezhiliang/DesignPatterns/blob/master/src/com/atguigu/principle/inversion/improve/DependecyInversion.java)
 
 ### 3. 依赖倒转原则(Dependence Inversion Principle)
 ##### 基本介绍
@@ -56,7 +56,7 @@
     2) 变量的声明类型尽量是抽象类或接口, 这样我们的变量引用和实际对象间，就存在一个缓冲层，利于程序扩展和优化
     3) 继承时遵循里氏替换原则
    
-[代码演示看 com.atguigu.principle.demeter](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/demeter/)   
+[代码演示看 com.atguigu.principle.demeter](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/principle/demeter/)   
     
 ### 4. 里氏替代原则(Liskov Substitution Principle)
 ##### OO中的继承性的思考和说明
@@ -74,7 +74,7 @@
      通用的做法是：原来的父类和子类都继承一个更通俗的基类，原有的继承关系去掉，采用依赖，聚合，组合等关系代替
 
 
-[代码演示看 com.atguigu.principle.liskov](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/liskov/)
+[代码演示看 com.atguigu.principle.liskov](https://github.com/hezhiliang/DesignPatterns/tree/master/src/com/atguigu/principle/liskov/)
 
 ### 5. 开闭原则(Open Closed Principle)
 ##### 基本介绍
