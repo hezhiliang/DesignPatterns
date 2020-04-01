@@ -63,3 +63,13 @@ To produce a code block in Markdown, simply indent every line of the block by at
 [Sina Blog](blog.sina.com.cn)
 
 [百度](www.baidu.com)
+
+## README.md中添加图片格式如下：
+
+! + [图片描述 ] + (图片的url ) 即：![](img_url)
+
+注意：使用英文输入法；注意不要使用空格；
+
+[]中的描述：图片不存在时，显示的图片说明。
+
+前提：在项目中创建存放截图文件夹，存放图片，并推送成功。

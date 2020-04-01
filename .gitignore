@@ -7,3 +7,9 @@
 *.iml
 out
 gen
+
+# Eclipse project files
+.classpath
+.project
+.settings
+.bin
