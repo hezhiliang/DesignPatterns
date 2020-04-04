@@ -1,0 +1,194 @@
+@startuml
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+Object[] elementData
+size()
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+@enduml
+
+
+@startuml
+Class01 <|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+@enduml
+
+@startuml
+Class11 <|.. Class12
+Class13 --> Class14
+Class15 ..> Class16
+Class17 ..|> Class18
+Class19 <--* Class20
+@enduml
+
+@startuml
+Class21 #-- Class22
+Class23 x-- Class24
+Class25 }-- Class26
+Class27 +-- Class28
+Class29 ^-- Class30
+@enduml
+
+/'关系上的标识
+在关系之间使用标签来说明时, 使用 :后接 标签文字。
+对元素的说明，你可以在每一边使用 "" 来说明.'/
+@startuml
+Class01 "1" *-- "many" Class02 : contains
+Class03 o-- Class04 : aggregation
+Class05 --> "1" Class06
+@enduml
+
+/'在标签的开始或结束位置添加< 或 >以表明是哪个对象作用到哪个对象上。'/
+@startuml
+class Car
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+@enduml
+
+'添加方法
+/'为了声明字段(对象属性）或者方法，你可以使用 后接字段名或方法名。
+系统检查是否有括号来判断是方法还是字段。'/
+@startuml
+Object <|-- ArrayList
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+
+/'也可以使用{} 把字段或者方法括起来
+注意，这种语法对于类型/名字的顺序是非常灵活的。'/
+class Dummy {
+  String data
+  void methods()
+}
+class Flight {
+   flightNumber : Integer
+   departureTime : Date
+}
+
+/'你可以（显式地）使用 {field} 和 {method} 修饰符来覆盖解析器的对于字段和方法的默认行为'/
+class Dummy {
+  {field} A field (despite parentheses)
+  {method} Some method
+}
+@enduml
+
+/'定义可访问性
+一旦你定义了域或者方法，你可以定义 相应条目的可访问性质。'/
+@startuml
+class Dummy {
+ -field1
+ #field2
+ ~method1()
+ +method2()
+}
+@enduml
+
+
+
+/'抽象与静态
+通过修饰符{static}或者{abstract}，可以定义静态或者抽象的方法或者属性。
+
+这些修饰符可以写在行的开始或者结束。也可以使用{classifier}这个修饰符来代替{static}.'/
+
+@startuml
+class Dummy {
+  {static} String id
+  {abstract} void methods()
+}
+@enduml
+
+/'高级类体
+PlantUML默认自动将方法和属性重新分组，你可以自己定义分隔符来重排方法和属性，
+下面的分隔符都是可用的：--..==__.
+
+还可以在分隔符中添加标题：'/
+@startuml
+class Foo1 {
+  You can use
+  several lines
+  ..
+  as you want
+  and group
+  ==
+  things together.
+  __
+  You can have as many groups
+  as you want
+  --
+  End of class
+}
+
+class User {
+  .. Simple Getter ..
+  + getName()
+  + getAddress()
+  .. Some setter ..
+  + setName()
+  __ private data __
+  int age
+  -- encrypted --
+  String password
+}
+
+@enduml
+
+
+/'备注和模板
+模板通过类关键字("<<"和">>")来定义
+
+你可以使用note left of , note right of , note top of , note bottom of这些关键字来添加备注。
+
+你还可以在类的声明末尾使用note left, note right,note top, note bottom来添加备注。
+
+此外，单独用note这个关键字也是可以的，使用 .. 符号可以作出一条连接它与其它对象的虚线。'/
+@startuml
+class Object << general >>
+Object <|--- ArrayList
+
+note top of Object : In java, every class\nextends this one.
+
+note "This is a floating note" as N1
+note "This note is connected\nto several objects." as N2
+Object .. N2
+N2 .. ArrayList
+
+class Foo
+note left: On last defined class
+
+@enduml
+
+
+@startuml
+class Persion {
+private String name
+private IDCard idCard
+}
+
+class IDCard
+
+Persion *-- IDCard
+
+@enduml
