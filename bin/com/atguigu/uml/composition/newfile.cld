@@ -278,7 +278,7 @@
             </java.beans.PropertyChangeSupport>
           </listeners>
           <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$2" reference="../../net.java.amateras.uml.classdiagram.model.AttributeModel/visibility"/>
-          <name>moniter</name>
+          <name>monitor</name>
           <type>Moniter</type>
           <isStatic>false</isStatic>
         </net.java.amateras.uml.classdiagram.model.AttributeModel>

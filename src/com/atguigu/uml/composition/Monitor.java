@@ -1,5 +1,5 @@
 package com.atguigu.uml.composition;
 
-public class Moniter {
+public class Monitor {
 
 }
