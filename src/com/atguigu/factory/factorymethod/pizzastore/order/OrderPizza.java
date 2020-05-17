@@ -1,14 +1,20 @@
 package com.atguigu.factory.factorymethod.pizzastore.order;
 
+import com.atguigu.factory.factorymethod.pizzastore.pizza.Pizza;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.atguigu.factory.factorymethod.pizzastore.pizza.Pizza;
-
-
-
-
+/**
+ * 看一个新的需求
+ *	披萨项目新的需求：客户在点披萨时，可以点不同口味的披萨，比如 北京的奶酪pizza、
+ * 北京的胡椒pizza 或者是伦敦的奶酪pizza、 伦敦的胡椒pizza。
+ *
+ * 工厂方法模式：定义了一个创建对象的抽象方法，由子类决定要实例化的类。工厂方
+ * 法模式将对象的实例化推迟到子类。
+ *
+ */
 public abstract class OrderPizza {
 
 	//定义一个抽象方法，createPizza , 让各个工厂子类自己实现

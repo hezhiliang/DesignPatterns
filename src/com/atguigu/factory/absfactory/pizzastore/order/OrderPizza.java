@@ -1,13 +1,13 @@
 package com.atguigu.factory.absfactory.pizzastore.order;
 
+import com.atguigu.factory.absfactory.pizzastore.pizza.Pizza;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.atguigu.factory.absfactory.pizzastore.pizza.Pizza;
-
 public class OrderPizza {
-
+	//抽象工厂对象
 	AbsFactory factory;
 
 	// 构造器
