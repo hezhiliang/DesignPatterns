@@ -11,7 +11,7 @@ public class PizzaStore {
 		new OrderPizza1(new SimpleFactory());
 		System.out.println("~~退出程序~~");
 
-		//方法三：使用静态工厂模式
+		//方法三：使用静态工厂模式(简单工厂模式也叫静态工厂模式)
 //		new OrderPizza2();
 	}
 
