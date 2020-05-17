@@ -1,22 +1,23 @@
 package com.atguigu.factory.simplefactory.pizzastore.order;
 
+import com.atguigu.factory.simplefactory.pizzastore.pizza.Pizza;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.atguigu.factory.simplefactory.pizzastore.pizza.Pizza;
-
+/**
+ * 静态工厂模式
+ * 区别：相较于简单工厂模式，代码上更简洁，功能上没有区别。
+ *
+ */
 public class OrderPizza2 {
-
-	Pizza pizza = null;
-	String orderType = "";
 	// 构造器
 	public OrderPizza2() {
-		
 		do {
-			orderType = getType();
-			pizza = SimpleFactory.createPizza2(orderType);
+			String orderType = getType();
 
+			Pizza pizza = SimpleFactory.createPizza2(orderType);
 			// 输出pizza
 			if (pizza != null) { // 订购成功
 				pizza.prepare();

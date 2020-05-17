@@ -4,14 +4,15 @@ package com.atguigu.factory.simplefactory.pizzastore.order;
 public class PizzaStore {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//方法一：传统方式
 		//new OrderPizza();
 		
-		//使用简单工厂模式
-		//new OrderPizza(new SimpleFactory());
-		//System.out.println("~~退出程序~~");
-		
-		new OrderPizza2();
+		//方法二：使用简单工厂模式
+		new OrderPizza1(new SimpleFactory());
+		System.out.println("~~退出程序~~");
+
+		//方法三：使用静态工厂模式
+//		new OrderPizza2();
 	}
 
 }
