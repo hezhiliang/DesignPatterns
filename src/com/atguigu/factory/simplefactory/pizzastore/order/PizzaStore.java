@@ -5,7 +5,7 @@ public class PizzaStore {
 
 	public static void main(String[] args) {
 		//方法一：传统方式
-		//new OrderPizza();
+		//new OrderPizzaFactory();
 		
 		//方法二：使用简单工厂模式
 		new OrderPizza1(new SimpleFactory());

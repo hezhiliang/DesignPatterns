@@ -5,7 +5,7 @@ import com.atguigu.factory.factorymethod.pizzastore.pizza.BJPepperPizza;
 import com.atguigu.factory.factorymethod.pizzastore.pizza.Pizza;
 
 
-public class BJOrderPizza extends OrderPizza {
+public class BJOrderPizzaFactory extends OrderPizzaFactory {
 
 	
 	@Override

@@ -5,7 +5,7 @@ import com.atguigu.factory.factorymethod.pizzastore.pizza.LDPepperPizza;
 import com.atguigu.factory.factorymethod.pizzastore.pizza.Pizza;
 
 
-public class LDOrderPizza extends OrderPizza {
+public class LDOrderPizzaFactory extends OrderPizzaFactory {
 
 	
 	@Override
